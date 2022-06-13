@@ -33,7 +33,7 @@ class Country:
             WIN.blit(self.name_display, self.pos)
         
 
-
+Ecuador = Country("Ecuador", "Ecuador.png", (19, 20), (260, 378))
 United_States = Country("United States", "United_States2.png",(156, 95), (140, 210))     
 
 
@@ -49,6 +49,7 @@ def main():
         
         WIN.blit(WORLD,(0,0))
         United_States.update()
+        Ecuador.update()
         p.display.update()
     p.quit()           
 
