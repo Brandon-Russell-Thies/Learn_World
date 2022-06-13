@@ -35,8 +35,8 @@ class Country:
         if self.pos[0] < p.mouse.get_pos()[0] and self.pos[0] + self.size[0] > p.mouse.get_pos()[0] and self.pos[1] < p.mouse.get_pos()[1] and self.pos[1] + self.size[1] > p.mouse.get_pos()[1]:
             self.name_display = self.display_name.render(self.country_name, 1, (0,0,0))
             WIN.blit(self.name_display, self.pos)
-        
-
+Chile = Country("Chile", "Chile.png", (40, 150), (270, 430))      
+Peru = Country("Peru", "Peru.png", (42, 54), (259, 383))
 Ecuador = Country("Ecuador", "Ecuador.png", (19, 20), (260, 378))
 United_States = Country("United States", "United States.png",(156, 95), (140, 210))  
 
@@ -54,6 +54,8 @@ def main():
         WIN.blit(WORLD,(0,0))
         United_States.update()
         Ecuador.update()
+        Peru.update()
+        Chile.update()
         p.display.update()
     p.quit()           
 
