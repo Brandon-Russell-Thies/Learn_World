@@ -14,6 +14,10 @@ WORLD = p.transform.scale(WORLD_MAP, (WIDTH, HEIGHT))
 WIN = p.display.set_mode((WIDTH, HEIGHT))
 p.display.set_caption("World Map")
 
+class CountryPage:
+    def __init__(self) -> None:
+        pass
+
 
 class Country:
     def __init__(self, country_name: str, file_name: str, size: tuple, pos: tuple) -> None:
@@ -21,7 +25,7 @@ class Country:
         self.pos = pos
         self.country_name = country_name
         self.file_name = file_name
-        self.COUNTRY = p.image.load(os.path.join("assets", file_name))
+        self.COUNTRY = p.image.load(os.path.join(f"assets/{country_name}", file_name))
         self.COUN = p.transform.scale(self.COUNTRY,size)
         self.display_name = p.font.SysFont("monospace", 10)
     
@@ -34,7 +38,7 @@ class Country:
         
 
 Ecuador = Country("Ecuador", "Ecuador.png", (19, 20), (260, 378))
-United_States = Country("United States", "United_States2.png",(156, 95), (140, 210))     
+United_States = Country("United States", "United States.png",(156, 95), (140, 210))  
 
 
 def main():
